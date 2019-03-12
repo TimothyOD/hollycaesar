@@ -1,0 +1,178 @@
+// Widescreens
+@include mediaXl {
+  .projects {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+// Desktop & Laptops
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      position: relative;
+      left: 0.5rem;
+    }
+
+    .icons {
+      margin-right: 1.6rem;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &.lg-heading {
+      font-size: 1.25rem;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &.lg-heading {
+      font-size: 0.75rem;
+    }
+  }
+
+  .left-wrap {
+    padding-left: 1.5rem;
+  }
+
+  .right-wrap {
+    padding-right: 1.5rem;
+  }
+
+  .menu-nav {
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 0vh;
+    transform: translate3d(0, -100%, 0);
+
+    .portrait {
+      width: 100px;
+      height: 100px;
+      background-size: 100px;
+      border: solid 2px $secondary-color;
+    }
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .bio p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .cv-info {
+    grid-template-areas:
+      'job1'
+      'job2'
+      'job3'
+      'job4';
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-heading {
+    font-size: 0.9rem;
+  }
+  h2.pg-heading {
+    left: 0rem;
+  }
+  .company-info {
+    background: #262c1c;
+    border-right: 0;
+    border-bottom: 1px solid #87c723;
+  }
+
+  .sm-heading-2 {
+    padding-top: 35px;
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  main#home h1 {
+    margin-top: 10vh;
+  }
+  h2.pg-heading {
+    left: 0rem;
+  }
+  h1.lg-heading {
+    font-size: 2rem;
+  }
+
+  h2.sm-heading {
+    font-size: 1rem;
+  }
+  .text-o {
+    font-size: 70px;
+    top: 0.45rem;
+    padding: 7px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .featured {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cv-info {
+    grid-template-areas:
+      'bioimage'
+      'bio'
+      'job1'
+      'job2'
+      'job3'
+      'job4';
+    grid-template-columns: 1fr;
+  }
+  .logos {
+    grid-template-columns: 1fr;
+  }
+  .img-heading {
+    font-size: 0.9rem;
+  }
+  main {
+    padding: 2rem;
+  }
+  main {
+    padding: 1.5rem;
+    padding-top: 1rem;
+  }
+  h2.lg-heading {
+    line-height: 20px;
+    margin-top: 10px;
+  }
+  h3.lg-heading {
+    line-height: 15px;
+    margin-top: 15px;
+  }
+
+  .sm-heading-2 {
+    padding-top: 45px;
+  }
+}

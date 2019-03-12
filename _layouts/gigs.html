@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+{% include head.html %}
+
+<body id="bg-img">
+
+{% include header.html %}
+
+<main id="home">
+
+    <h2 class="sm-heading-2">
+        Regular Gigs
+      </h2>
+        <div class="bio">
+          <p>Tuesdays 8pm @<a href="https://oxenfree.net" target="_blank">
+            {{ page.sections['tuesday'] | textilize }}
+          </a>- Jalan Sosrowijayan #2, Yogyakarta</p>
+          <p>Saturdays 8pm @<a href="https://oxenfree.net" target="_blank">
+            {{ page.sections['saturday'] | textilize }}
+          </a>- Jalan Sosrowijayan #2, Yogyakarta</p>
+        </div>
+      </div>
+      <h2 class="sm-heading-2">
+          Upcoming Gigs
+        </h2>
+
+          <div class="bio">
+              {{ content }}
+          </div>
+        </div>
+</main>
+
+{% include footer.html %}
+
+<script src="public/js/main.js"></script>
+</body>
+</html>

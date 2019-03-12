@@ -1,0 +1,24 @@
+<nav class="menu">
+    <div class="menu-branding">
+      <div></div>
+    </div>
+    <ul class="menu-nav">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+      <li {% if page.url contains '/about' %}class="current"{% endif %}>
+        <a href="/about.html" class="nav-link">About</a>
+      </li>
+      <li {% if page.url contains '/media' %}class="current"{% endif %}>
+        <a href="/media.html" class="nav-link">Media</a>
+      </li>
+      <li {% if page.url contains '/gigs' %}class="current"{% endif %}>
+        <a href="/gigs.html" class="nav-link">Gigs</a>
+      </li>
+      <li {% if page.url contains '/contact' %}class="current"{% endif %}>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </li>
+      <li>
+          {% include icons.html %}
+      </li>
+    </ul>
+  </nav>

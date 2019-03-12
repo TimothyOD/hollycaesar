@@ -1,0 +1,311 @@
+---
+# Main SASS > CSS
+---
+
+@import 'config';
+@import 'menu';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background();
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+// Headings
+h1 {
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &.lg-heading {
+    font-size: 3rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0);
+    position: relative;
+    top: -1rem;
+    font-weight: 400;
+  }
+
+  &.sm-heading-2 {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0);
+    position: relative;
+    top: -1rem;
+  }
+
+  &.pg-heading {
+    padding: 0.2rem 1rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0);
+    position: relative;
+    left: -1rem;
+    top: -1.75rem;
+  }
+  &.ov-heading {
+    padding: 0.2rem 1rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0);
+    position: relative;
+    left: -1rem;
+    top: -1.75rem;
+  }
+  &.text-secondary {
+    color: $secondary-color;
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &.lg-heading {
+    font-size: 2rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0);
+    position: relative;
+    top: -1rem;
+    font-weight: 400;
+  }
+
+  &.sm-heading-2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: $secondary-color;
+    margin-top: 15px;
+  }
+}
+
+h3 {
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+
+  &.lg-heading {
+    font-size: 1.25rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    color: $secondary-color;
+    background: rgba(lighten($primary-color, 2), 0);
+    position: relative;
+    left: 0.25rem;
+    top: -1rem;
+  }
+}
+
+h4 {
+  font-weight: 100;
+  font-size: 0.85rem;
+  line-height: 1.1rem;
+  letter-spacing: 0.07rem;
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+    @include easeOut();
+  }
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-first {
+  position: relative;
+}
+
+.text-last {
+  color: $secondary-color;
+  position: relative;
+}
+
+main {
+  padding: 4rem;
+  // height: 100%;
+  min-height: calc(100vh - 30px);
+  margin-block-end: 33px;
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+// ABOUT
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio bio';
+  grid-template-columns: repeat (4, fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+    position: relative;
+    top: -50%;
+    transform: translateY(50%);
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1rem;
+    background: lighten($primary-color, 5);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: $secondary-color 5px solid;
+    background: $primary-color;
+    height: 100%;
+    display: none;
+  }
+
+  .bio p {
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.25rem;
+  }
+}
+
+.bio {
+  font-size: 1rem;
+  font-weight: 400;
+  background: $primary-color;
+  opacity: 0.95;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: $secondary-color 3px solid;
+  margin-top: 1rem;
+}
+
+// CV
+
+.cv-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  grid-gap: 5px;
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+.roles {
+  color: $secondary-color;
+}
+
+.edu {
+  margin-top: 4.5rem;
+}
+
+// Work/Projects
+.projects {
+  display: grid;
+  grid-gap: 0.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+    border: $secondary-color 3px solid;
+  }
+}
+
+h4.pg-heading {
+  color: $secondary-color;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color ($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  font-size: 0.85rem;
+
+  color: #fff;
+  &:hover {
+    color: $secondary-color;
+    @include easeOut;
+  }
+}
+
+// Footer
+#main-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background: black;
+  color: $secondary-color;
+  border-top: $secondary-color 3px solid;
+  line-height: 30px;
+  z-index: 50;
+}
+
+.g-recaptcha {
+  display: none;
+}
+
+@import 'mobile';

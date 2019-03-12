@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body id="bg-img">
+    {% include header.html %}
+
+    <main id="contact">
+      <h2 class="sm-heading-2">
+        Contact
+      </h2>
+
+      <div class="container">
+        <div class="wrapper animated bounceInLeft">
+          <div class="company-info">
+              <div class="icons">
+                  <a href="">
+                      <i class="fa fa-spotify"></i>
+                    </a> 
+                    <a href="">
+                        <i class="fa fa-apple"></i>
+                        <a href="">
+                            <i class="fa fa-youtube-square"></i>
+                    <a href="">
+                        <i class="fa fa-instagram"></i>
+                      </a> 
+                      <a href="">
+                          <i class="fa fa-facebook"></i>
+                        </a>    
+                  <a href="contact.html">
+                        <i class="fa fa-envelope"></i>
+                      </a>
+                    </div>
+          </div>
+          <div class="contact">
+            <div class="alert">Your message has been sent</div>
+            <form
+              name="contact"
+              method="POST"
+              action="http://serverlessforms.com/api/form/13062540-2ab4-5621-b63f-4ce458cb84dc/form-response"
+            >
+              <p>
+                <label>Name</label>
+                <input type="text" name="name" required />
+              </p>
+              <p>
+                <label>Email</label>
+                <input type="email" name="email" required />
+              </p>
+              <p class="full">
+                <label>Message</label>
+                <textarea name="message" rows="10" required></textarea>
+              </p>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6Le40pMUAAAAABu1hSgJedgqaIaZjo61QofNUjAL"
+              ></div>
+              <p class="full">
+                <button type="submit">Submit</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script src="public/js/main.js"></script>
+  </body>
+</html>
